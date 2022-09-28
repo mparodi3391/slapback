@@ -1,0 +1,231 @@
+/*NAVBAR STYLES*/
+
+.scroll {
+    background-color:black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7vh;
+    transition: linear 200ms;
+    z-index: 2;
+}
+
+.navbar {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 7vh;
+    z-index: 1;
+}
+
+.navbar img {
+    display: none;
+    max-height: 85%;
+    margin-left: 1vw;
+}
+
+.scroll img {
+    
+    max-height: 85%;
+    margin-left: 1vw;
+    padding-right: 2vw;
+}
+
+
+.scroll a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    height: 7vh;
+    padding-top: 3.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    height: 7vh;
+    padding-top: 3.5vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.scroll a:hover {
+    background: white;
+    color: black;
+}
+
+.navbar a:hover {
+    background: white;
+    color: black;
+}
+
+.botones-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 7vh;
+}
+
+ /*FIRST PAGE STYLES*/
+
+.div1 {
+    display: flex;
+    background-image: url(images/photo-studio.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.div1::after {
+    content: '';
+    display: block;
+    background-color: #3271a8;
+    opacity: 0.4;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+}
+
+.div1 img {
+    max-width: 50%;
+    max-height: 50%;
+    z-index: 1;
+}
+
+.div1 span {
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    margin: 3vw;
+    padding: 1vw;
+    z-index: 1;
+    border-bottom: 0.5vw solid white;
+    border-top: 0.5vw solid white;
+    border-radius: 5px;
+
+}
+
+/*SECOND PAGE STYLES*/
+
+.div2 {
+    background-color: white;
+    width: 100%;
+    height: 93vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(2, 50%);
+    
+}
+
+.div2 div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.div2 div img {
+    font-family: 'Source Sans Pro', sans-serif;
+    max-width: 80%;
+    max-height: 80%;
+    
+}
+
+#one{
+    margin: 10% 0 0 10%;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#two {
+    margin: 10% 10% 0 0;
+    grid-column: 3;
+    grid-row: 1;
+    transition-delay: 200ms;
+}
+
+#three {
+    margin: 0 0 10% 10%;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#four {
+    margin: 0 10% 10% 0;
+    grid-column: 3;
+    grid-row: 2;
+    transition-delay: 200ms;
+}
+
+/*THIRD PAGE STYLES*/
+
+
+.div3 {
+    background-color: lightblue;
+    width: 100%;
+    height: 93vh;
+    margin: 0;
+}
+
+/*CONTACT FORM AND ENDING STYLE*/
+
+.div4 {
+    background-color: yellow;
+    width: 100%;
+    height: 93vh;
+    margin: 0;
+}
+
+/*GLOBAL STYLES*/
+
+div {
+    margin: 0;
+}
+
+/*ANIMATION STYLES*/
+
+.hidden {
+    opacity: 0;
+    transition: all 1000ms;
+    filter: blur(0.5vw);
+}
+
+.hiddenright {
+    opacity: 0;
+    transition: all 1000ms;
+    filter: blur(0.5vw);
+    transform: translateX(-25%);
+}
+
+.hiddenleft {
+    opacity: 0;
+    transition: all 1000ms;
+    filter: blur(0.5vw);
+    transform: translateX(25%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
