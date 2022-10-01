@@ -5,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="gradient-div.css" />
     <script src="main.js"></script>
     <script defer src="ie.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@700;800;900&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body style="margin: 0;">
 
     <div id="nav" class="navbar">
-        <img src="images/icon_sb.png" alt="Slapback Logo">
-        <div class="botones-nav">
-            <a href="#home">CASA</a>
-            <a href="#news">NOTICIAS</a>
-            <a href="#contact">CONTACTO</a>
-        </div>
-        
+        <img src="images/white_sb_icon.png" alt="Slapback Logo">
+        <a id="nav-aparecer" href="#home">CASA</a>
+        <a href="#nosotros">NOSOTROS</a>
+        <a href="#artistas">ARTISTAS</a>
+        <a href="#contacto">CONTACTO</a>
     </div>
 
     <div class="wrapper">
@@ -29,23 +28,51 @@
             <img class="hiddenright" src="images/logo.png" alt="Slapback Logo">
             <span class="hiddenleft">MUSICA PRO PARA VOS</span>
         </div>
-        <div class="div2">
-            <div class="imagen"></div>
+        <div id="nosotros" class="div2">
+            <span class="imagen"></span>
+            <div class="cabeza">
+                <h2 style="margin-bottom: 0;">¡Graba con Nosotros!</h2>
+            </div>
             <div id="one">
-                <img class="hiddenleft" src="images/1GRABACION-removebg-preview.png" alt="grabacion">
+                <!--<img class="hiddenleft" src="images/1GRABACION-removebg-preview.png" alt="grabacion">-->
+                <div class="gradiente1 gradiente hiddenleft" id="graba">
+                    <div class="texto">Grabacion</div>
+                    <p class="texto-chico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum facilis, voluptates quibusdam quaerat, repellendus </p>
+                </div>
             </div>
             <div id="two">
-                <img class="hiddenleft" src="images/2PRODUCION-removebg-preview.png" alt="producion">
+                <div class="gradiente2 gradiente hiddenleft" id="prod">
+                    <div class="texto">Producion</div>
+                    <p class="texto-chico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum facilis, voluptates quibusdam quaerat, repellendus </p>
+                </div>
+                <!--<img class="hiddenleft" src="images/2PRODUCION-removebg-preview.png" alt="producion">-->
             </div>
             <div id="three">
-                <img class="hiddenleft" src="images/3EDICION-removebg-preview.png" alt="edicion">
+                <div class="gradiente3 gradiente hiddenleft" id="edi">
+                    <div class="texto">Edicion</div>
+                    <p class="texto-chico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum facilis, voluptates quibusdam quaerat, repellendus </p>
+                </div>
+                <!--<img class="hiddenleft" src="images/3EDICION-removebg-preview.png" alt="edicion">-->
             </div>
             <div id="four">
-                <img class="hiddenleft" src="images/4POST-removebg-preview.png" alt="postproduccion">
+                <div class="gradiente4 gradiente hiddenleft" id="post">
+                    <div class="texto">Postproduccion</div>
+                    <p class="texto-chico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati laborum facilis, voluptates quibusdam quaerat, repellendus </p>
+                </div>
+                <!--<img class="hiddenleft" src="images/4POST-removebg-preview.png" alt="postproduccion">-->
             </div>
         </div>
-        <div class="div3"></div>
-        <div class="div4"></div>
+        <div id="artistas" class="div3 hidden">
+            <div class="texto-artistas">
+                Escucha musica de nuestro artistas
+            </div>
+            <div id="reproductor">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0rEjDmvpOiruxUk5KnHddU?utm_source=generator" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div id="contacto" class="div4">
+            <form action=""></form>
+        </div>
     </div>
     
 </body>

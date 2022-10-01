@@ -1,0 +1,103 @@
+
+.gradiente {
+    --background-color: white;
+    --border-color: linear-gradient(to right, orange, red);
+    --border-width: 0.7em;
+    --edge-size: 2.5em;
+    cursor: pointer;
+    background: var(--background-color);
+    padding: 0.5em 1.5em;
+    border: 0;
+    position: relative;
+    isolation: isolate;
+    clip-path: polygon(
+      var(--edge-size) 0%,
+      100% 0,
+      100% calc(100% - var(--edge-size)),
+      calc(100% - var(--edge-size)) 100%,
+      0 100%,
+      0% var(--edge-size)
+    );
+  }
+  
+  .gradiente::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--border-color);
+    z-index: -2;
+  }
+  
+  .gradiente::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--background-color);
+    z-index: -1;
+    clip-path: polygon(
+
+      var(--border-width) calc(var(--edge-size) + var(--border-width) * 0.5),
+
+      calc(var(--edge-size) + var(--border-width) * 0.5) var(--border-width),
+
+      calc(100% - var(--border-width)) var(--border-width),
+
+      calc(100% - var(--border-width))
+        calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
+
+      calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+        calc(100% - var(--border-width)),
+
+      calc(var(--border-width)) calc(100% - var(--border-width))
+    );
+  }
+
+ .gradiente1 {
+    --border-color: linear-gradient(to bottom right, black, lightblue);
+    
+  } 
+
+  .gradiente2 {
+    --border-color: linear-gradient(to bottom right, purple, blue);
+    transition-delay: 100ms;
+  }
+
+  .gradiente3 {
+    --border-color: linear-gradient(to bottom right, rgb(8, 140, 74),rgb(190, 66, 20));
+    transition-delay: 200ms;
+  }
+
+  .gradiente4 {
+    --border-color: linear-gradient(to bottom right, red, blue);
+    transition-delay: 300ms;
+  }
+
+  .gradiente p {
+    text-align: center;
+  }
+
+  .gradiente {
+    transition: all 1000ms;
+  }
+
+  .gradiente::after{
+    transition: clip-path 500ms;
+  }
+  
+  .gradiente:hover::after {
+    clip-path: polygon(
+    calc(100% - var(--border-width))
+    calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)), 
+    calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+    calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
+    calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+    calc(100% - var(--border-width)),
+    calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+    calc(100% - var(--border-width))
+    );
+  }
+
+
+
